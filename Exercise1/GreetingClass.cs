@@ -36,7 +36,7 @@ namespace Exercise1
                     if (i == names.Length - 2)
                         response += "and ";
                 }
-            }
+            } 
             response += ".";
             return response;
         }
