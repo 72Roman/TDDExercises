@@ -26,8 +26,9 @@ namespace Exersice1Tests
         {
             // arrange
             string expected = "Hello, my friend.";
+            string name = null;
             // act
-            string actual = GreetingClass.Greet(null);
+            string actual = GreetingClass.Greet(name);
             // assert
             Assert.AreEqual(expected, actual);
         }
@@ -51,6 +52,17 @@ namespace Exersice1Tests
             string actual = GreetingClass.Greet(name);
             // assert
             Assert.AreEqual(expected, actual);
+        }
+        [Test]
+        public void Greet_ArrayOfTwoNames_HelloToBothNamesReturned()
+        {
+            // arrange
+            string[] names = { "Jill", "Jane" };
+            string expected = "Hello, Jill and Jane.";
+            // act
+            string actual = GreetingClass.Greet(names);
+            // assert
+            Assert.IsTrue(expected.Equals(actual));
         }
         [Test]
         public void IsStringInUpperCase_UpperCaseString_TrueReturned()

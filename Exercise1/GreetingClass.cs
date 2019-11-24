@@ -14,6 +14,18 @@ namespace Exercise1
                 return "HELLO " + name + '!';
             return "Hello, " + name + ".";
         }
+        public static string Greet(string[] names)
+        {
+            string response = "Hello, ";
+            for(int i = 0; i < names.Length; i++)
+            {
+                response = response + names[i];
+                if (i == names.Length - 2)
+                    response += " and ";
+            }
+            response += '.';
+            return response;
+        }
         public static bool IsStringInUpperCase(string str)
         {
             if (String.IsNullOrEmpty(str))
