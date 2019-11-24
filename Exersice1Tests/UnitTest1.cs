@@ -65,6 +65,17 @@ namespace Exersice1Tests
             Assert.IsTrue(expected.Equals(actual));
         }
         [Test]
+        public void Greet_ArrayOfMoreThanTwoNames_HelloToAllNamesReturned()
+        {
+            // arrange
+            string[] names = { "Amy", "Brian", "Charlotte" };
+            string expected = "Hello, Amy, Brian, and Charlotte.";
+            // act
+            string actual = GreetingClass.Greet(names);
+            // assert
+            Assert.IsTrue(expected.Equals(actual));
+        }
+        [Test]
         public void IsStringInUpperCase_UpperCaseString_TrueReturned()
         {
             // arrange

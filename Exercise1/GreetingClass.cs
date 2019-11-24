@@ -17,15 +17,30 @@ namespace Exercise1
         public static string Greet(string[] names)
         {
             string response = "Hello, ";
-            for(int i = 0; i < names.Length; i++)
+            if(names.Length == 2)
             {
-                response = response + names[i];
-                if (i == names.Length - 2)
-                    response += " and ";
+                for (int i = 0; i < names.Length; i++)
+                {
+                    response = response + names[i];
+                    if (i == names.Length - 2)
+                        response += " and ";
+                }
             }
-            response += '.';
+            else
+            {
+                for (int i = 0; i < names.Length; i++)
+                {
+                    response = response + names[i];
+                    if (i <= names.Length - 2)
+                        response += ", ";
+                    if (i == names.Length - 2)
+                        response += "and ";
+                }
+            }
+            response += ".";
             return response;
         }
+        // public static string Greet(params string[] names) { }
         public static bool IsStringInUpperCase(string str)
         {
             if (String.IsNullOrEmpty(str))
